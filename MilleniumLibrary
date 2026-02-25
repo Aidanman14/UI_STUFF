@@ -513,7 +513,7 @@
                 ZIndexBehavior = Enum.ZIndexBehavior.Global;
                 IgnoreGuiInset = true;
             });
-            
+            getgenv().items = library[ "items" ]
             library[ "other" ] = library:create( "ScreenGui" , {
                 Parent = coregui;
                 Name = "\0";
@@ -521,7 +521,7 @@
                 ZIndexBehavior = Enum.ZIndexBehavior.Sibling;
                 IgnoreGuiInset = true;
             }); 
-
+			getgenv().other = library[ "other" ]
             local items = cfg.items; do
                 items[ "main" ] = library:create( "Frame" , {
                     Parent = library[ "items" ];
